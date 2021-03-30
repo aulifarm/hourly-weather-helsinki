@@ -1,1 +1,119 @@
-<p>weather works!</p>
+<div class="header">
+    <h1 class="mainHeader">Helsingin sää 12h </h1>
+    <div class="sunsetAndSunriseTime">
+        <p class ="todayIs">{{WeatherData.day | date: 'd.M.yyyy'}}</p>
+        <p>Aurinko nousee kello {{WeatherData.sunrise_time}}</p>
+        <p>Aurinko laskee kello {{WeatherData.sunset_time}}</p>
+    </div>
+</div>
+<div class="mainWeatherDiv">
+    <div class="weatherDiv">
+        <h1>{{WeatherData.firstHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.firstHourIcon}}@2x.png" alt="firstHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.firstHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.firstHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.firstHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.secondHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.secondHourIcon}}@2x.png" alt="secondHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.secondHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.secondHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.secondHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.thirdHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.thirdhHourIcon}}@2x.png" alt="thirdhHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.thirdHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.thirdHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.thirdHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.fourthHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.fourthHourIcon}}@2x.png" alt="fourthHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.fourthHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.fourthHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.fourthHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.fifthHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.fifthHourIcon}}@2x.png" alt="fifthHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.fifthHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.fifthHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.fifthHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.sixthHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.sixthHourIcon}}@2x.png" alt="sixthHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.sixthHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.sixthHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.sixthHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.seventhHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.seventhHourIcon}}@2x.png" alt="seventhHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.seventhHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.seventhHour_feelsLike}}°C</p>
+        <!--<p><fa-icon [icon]="faTint"></fa-icon> {{WeatherData.seventhHour_rain}} mm</p>-->
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.seventhHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.eighthHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.eighthHourIcon}}@2x.png" alt="eighthHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.eighthHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.eighthHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.eighthHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.ninthHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.ninthHourIcon}}@2x.png" alt="ninthHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.ninthHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.ninthHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.ninthHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.tenthHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.tenthHourIcon}}@2x.png" alt="tenthHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.tenthHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.tenthHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.tenthHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.eleventhHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.eleventhHourIcon}}@2x.png" alt="eleventhHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.eleventhHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.eleventhHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.eleventhHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+    <div class="weatherDiv">
+        <h1>{{WeatherData.twelfthHour_dt * 1000 | date:'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{WeatherData.twelfthHourIcon}}@2x.png" alt="twelfthHourIcon">
+        <p style="font-size: 3rem;">{{WeatherData.twelfthHour_temp}}°C</p>
+        <p>Tuntuu kuin {{WeatherData.twelfthHour_feelsLike}}°C</p>
+        <p>
+            <fa-icon [icon]="faWind"></fa-icon> {{WeatherData.twelfthHour_wind | number: '1.0-0'}} m/s
+        </p>
+    </div>
+</div>

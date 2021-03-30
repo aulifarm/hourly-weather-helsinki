@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+
+html {
+    background: url(./assets/images/cloud.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+}
